@@ -1,0 +1,14 @@
+markers = [
+   {
+     "name": "Canada",
+     "url": "https://en.wikipedia.org/wiki/Canada",
+     "lat": -6.1711836,
+     "lng": 106.80851
+   },
+   {
+     "name": "Jalan Abdul Muis Jakarta",
+     "url": "https://en.wikipedia.org/wiki/Anguilla",
+     "lat": -6.173292,
+     "lng": 106.841036
+   }
+];
