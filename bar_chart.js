@@ -56,6 +56,7 @@ d3.csv(url, function(error, data){
     var label = svg.append('g')
         .attr('transform', 'translate(' + [margin.left - axisPadding, margin.top] + ')');
     label.append('text')
+        .text('Congestion [%]')
         .attr('transform', 'rotate(-90)')
         .attr({
             'text-anchor': 'start',
@@ -115,18 +116,24 @@ d3.csv(url, function(error, data){
     
     // tooltips
     var div = d3.select('.bar-chart').append('div')
-        .attr('class', 'tooltip')
-        .append('span')
-        .attr('class','tooltiptext')
+        .attr('class', 'tip')
+        .style('display', 'none');
     function mouseover(){
         div.style('display', 'inline');
     }
     function mousemove(){
         var d = d3.select(this).data()[0]
         div
-            .html(d.day + '<hr/>' + d.level)
-            .style('left', (d3.event.pageX - 34) + 'px')
-            .style('top', (d3.event.pageY - 12) + 'px');
+            .html("Day : " + d.day + '<br/>' + "Presentase : " + d.level + "%")
+            .attr('class', 'tip')
+           // 
+            
+            //.style('left', (d3.event.pageX - 134) + 'px')
+            .style('display', 'inline')
+            .style('top', (d3.event.pageY) - 500 + 'px')
+            .style('left', (d3.event.pageX - 100) + 'px')
+            console.log(d3.event.pageX);
+           
     }
     function mouseout(){
         div.style('display', 'none');
