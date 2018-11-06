@@ -130,7 +130,7 @@ d3.csv(url, function(error, data){
             
             //.style('left', (d3.event.pageX - 134) + 'px')
             .style('display', 'inline')
-            .style('top', (d3.event.pageY) - 500 + 'px')
+            .style('top', (d3.event.pageY) - 1000 + 'px')
             .style('left', (d3.event.pageX - 100) + 'px')
             console.log(d3.event.pageX);
            
