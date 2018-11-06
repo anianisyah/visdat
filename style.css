@@ -69,4 +69,7 @@ body {
 .footer-bg {
   background-color: #444; }
 
+text.highcharts-credits {
+  display: none; }
+
 /*# sourceMappingURL=style.css.map */

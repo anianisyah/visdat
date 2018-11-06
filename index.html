@@ -18,7 +18,15 @@
     <!-- import js --> 
     <script src="http://d3js.org/d3.v3.min.js"></script>
     
-    <!-- bar chart --> 
+    <!-- high chart --> 
+    <script src="http://code.highcharts.com/highcharts.js"></script>
+    <script src="http://code.highcharts.com/modules/exporting.js"></script>
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src = "https://code.highcharts.com/highcharts.js"></script>  
+    <script src = "https://code.highcharts.com/modules/drilldown.js"></script>  
+    <script src = "https://code.highcharts.com/modules/data.js"></script> 
+    <!-- end --> 
+
   </head>
 
   <body>
@@ -83,6 +91,14 @@
           
         </div>-->
 
+        <!-- bar char congestion  baru--> 
+        <div class="row">
+          <div  id="container" class="col-md-12" style="min-width: 400px; height: 400px; margin: 0 auto; padding-bottom:50px;">
+               <script type="text/javascript" src="congestion_perday.js"></script>
+          </div>
+        </div>
+
+
         <div class="row">
           <div class="col-md-6 box">
              <div class="bar-chart"></div>
@@ -135,11 +151,11 @@
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- Placed at the end of the document so the pages load faster 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>-->
+    
   </body>
 </html>
