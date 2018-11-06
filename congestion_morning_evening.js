@@ -40,7 +40,7 @@ Highcharts.chart('container2', {
         align: 'right',
         verticalAlign: 'top',
         x: -40,
-        y: 80,
+        y: 10,
         floating: true,
         borderWidth: 1,
         backgroundColor: ((Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'),
@@ -51,9 +51,9 @@ Highcharts.chart('container2', {
     },
     series: [{
         name: 'Morning (06:00 - 10:00 AM) ',
-        data: [107, 31, 35, 203, 25, 39,40]
+        data: [23, 21, 20, 22, 22, 18, 17]
     }, {
-        name: 'Evening (04:00 - 10:00 PM) ',
-        data: [133, 156, 147, 408, 6, 90,30]
+        name: 'Evening (04:00 - 08:00 PM) ',
+        data: [35, 34, 33, 34, 34, 33, 30]
     }]
 });
