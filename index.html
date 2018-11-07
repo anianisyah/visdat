@@ -29,15 +29,30 @@
 	<script type="text/javascript">
 		window.onload = function () {
 	 
-		var v = document.getElementById("myVideo");
-		var p = document.getElementById("pbr");
-		var c = document.getElementById("currentPbr");
+			var v = document.getElementById("myVideo");
+			var p = document.getElementById("pbr");
+			var c = document.getElementById("currentPbr");
 
-		p.addEventListener('input',function(){
-			c.innerHTML = p.value;
-			v.playbackRate = p.value;
-		},false);
-	};
+			p.addEventListener('input',function(){
+				c.innerHTML = p.value;
+				v.playbackRate = p.value;
+			},false);
+		};
+		
+		var jqxhr = $.getJSON("https://raw.githubusercontent.com/anianisyah/visdat/master/recap_congestion_by_date.json", function() {
+		  console.log( "success" );
+		})
+		  .done(function() {
+			console.log( "second success" );
+		  })
+		  .fail(function(e) {
+			console.log( "error" );
+			console.log(e);
+		  })
+		  .always(function() {
+			console.log( "complete" );
+		  });
+		 
 	</script>
   </head>
 
