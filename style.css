@@ -6,9 +6,9 @@ body {
   margin-left: 0px; }
 
 .nav-bg {
-  background-color: #fff; }
+  background-color: #444; }
   .nav-bg a {
-    color: #777 !important;
+    color: #fff !important;
     text-decoration: none; }
 
 /* CONGESTION LEVEL CONTAINER */
