@@ -3,7 +3,7 @@ $(function () {
     var chart;
 	
     $(document).ready(function() {
-       	var jqxhr = $.getJSON("https://raw.githubusercontent.com/anianisyah/visdat/master/recap_most_traffic_street.json", function(data) {
+       	var jqxhr = $.getJSON("data/recap_most_traffic_street.json", function(data) {
             var places = [];
             var jamFactors = [];
             var colors = Highcharts.getOptions().colors;

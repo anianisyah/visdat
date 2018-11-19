@@ -2,8 +2,9 @@ $(function () {
      var chart;
 
     $(document).ready(function(){
+        console.log('masuk ke chart');
 
-      var start_data = "https://raw.githubusercontent.com/anianisyah/visdat/master/recap_congestion_by_date.json";
+      var start_data = "data/recap_congestion_by_date.json";
       
       var jqxhr = $.getJSON(start_data, function() {
           create_chart(jqxhr);
@@ -13,11 +14,11 @@ $(function () {
               var select_jalan; 
 
                 if(this.value == "A"){
-                    select_jalan = "https://raw.githubusercontent.com/anianisyah/visdat/master/recap_congestion_by_date.json";
+                    select_jalan = "data/recap_congestion_by_date.json";
                 }else if(this.value == "B"){
                     select_jalan = "data/recap_congestion_by_date_2.json";
                 }else{
-                    select_jalan = "https://raw.githubusercontent.com/anianisyah/visdat/master/recap_congestion_by_date.json";
+                    select_jalan = "data/recap_congestion_by_date.json";
                 }
 
                 var call_function = $.getJSON(select_jalan, function(){
