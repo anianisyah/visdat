@@ -15,9 +15,9 @@
 </head>
 <body>
 	<div id="mapid"></div>
-	<script type='text/javascript' src='data/markers_jkt.json'></script>
+	<script type='text/javascript' src='data/markers_jkt2.json'></script>
 	<script>
-		var map = L.map('mapid').setView([-6.21462, 106.84513], 13);
+		var map = L.map('mapid').setView([-6.21462, 106.84513], 11);
 		L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
 			attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
 			maxZoom: 18,
@@ -27,8 +27,8 @@
 		
 		for ( var i=0; i < markers.length; ++i ) 
 		{
-			L.marker( [markers[i].lat, markers[i].lng] )
-		      .bindPopup( '<a href="' + markers[i].url + '" target="_blank">' + markers[i].name + '</a>' )
+			L.marker( [markers[i].start_lat, markers[i].start_long] )
+		      .bindPopup(  'status kemacetan: '+ markers[i].criticality+'<br>'+" jalan ditutup " )
 		      .addTo( map );
 		}
 
