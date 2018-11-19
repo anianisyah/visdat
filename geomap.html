@@ -17,6 +17,8 @@
 <body>
 	<div id="mapid"></div>
 	<script type='text/javascript' src='data/markers_jkt2.json'></script>
+	<script type='text/javascript' src='red_data-2018-10-24 12-00-21.json'></script>
+	<script type='text/javascript' src='green_data-2018-10-24 12-00-21.json'></script>
 	<script>
 		var map = L.map('mapid').setView([-6.21462, 106.84513], 11);
 		L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
@@ -25,27 +27,33 @@
 			id: 'mapbox.streets',
 			accessToken: 'pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw'
 		}).addTo(map);
-		
-		$.getJSON('red_data-2018-10-24 12-00-21.json', function (json) {
-				JSONItems = JSON.parse(json);
-  				console.log(JSONItems);		
-		});
-		var latlang = [
-			[[-6.14431,106.88613], [-6.14449,106.88607], [-6.14449,106.88607], [-6.14571,106.88569], [-6.14571,106.88569], [-6.14645,106.88547], [-6.14645,106.88547], [-6.14677,106.88537], [-6.14677,106.88537],[ -6.14752,106.88513], [-6.14752,106.88513],[-6.14772,106.88506],[-6.14772,106.88506], [-6.14849,106.8848], [-6.14849,106.8848], [-6.14887,106.8847], [-6.14887,106.8847], [-6.14911,106.88459], [-6.14911,106.88459], [-6.1493,106.88455], [-6.1494,106.88454]],[[-6.14849,106.8848], [-6.14887,106.8847]]
-         ];
-  		   
+		for ( var i=0; i < markers.length; ++i ) 
+		{
+			L.marker( [markers[i].start_lat, markers[i].start_long] )
+		      .bindPopup(  'status kemacetan: '+ markers[i].criticality+'<br>'+" jalan ditutup " )
+		      .addTo( map );
+		}
+		JSONItems="";
+		var JSONItems = [];
+		console.log(red_data);
+		var latlang_red = red_data;
+  		var latlang_green = green_data;
        
          
         
          
          // Creating poly line options
-         var multiPolyLineOptions = {color:'red'};
-         
+         var multiPolyLineOptions_red = {color:'red'};
+         var multiPolyLineOptions_green = {color:'green'};
          // Creating multi poly-lines
-         var multipolyline = L.polyline(latlang , multiPolyLineOptions);
+         var multipolyline_red = L.polyline(latlang_red , multiPolyLineOptions_red);
          
          // Adding multi poly-line to map
-         multipolyline.addTo(map);
+         multipolyline_red.addTo(map);
+         var multipolyline_green = L.polyline(latlang_green , multiPolyLineOptions_green);
+         
+         // Adding multi poly-line to map
+         multipolyline_green.addTo(map);
 
 
 	</script>
