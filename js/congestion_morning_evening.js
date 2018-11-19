@@ -15,7 +15,7 @@ $(function () {
                 if(this.value == "A"){
                     select_jalan = "https://raw.githubusercontent.com/anianisyah/visdat/89ab30dad4a5720cb759aaef50408acd132751a1/recap_morning_evening_peak.json";
                 }else if(this.value == "B"){
-                    select_jalan = "recap_morning_evening_peak_2.json";
+                    select_jalan = "data/recap_morning_evening_peak_2.json";
                 }else{
                     select_jalan = "https://raw.githubusercontent.com/anianisyah/visdat/89ab30dad4a5720cb759aaef50408acd132751a1/recap_morning_evening_peak.json";
                 }
