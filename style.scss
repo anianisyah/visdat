@@ -114,6 +114,34 @@ body{
 
 
 		}
+
+		/*table*/
+
+		table {
+			overflow: hidden;
+			width: 100%;
+
+			&.table-statistic{
+				margin: 10px 5px 10px 5px;
+				color : #777;
+
+				.car-box {
+					width: 80%;
+					padding-bottom: 10px;
+
+					.car-icon{
+						width: 40px;
+						height: 40px;
+					}
+				}
+
+				.text-box{
+					width: 20%;
+					font-weight: bold;
+				}
+			}
+		}
+		
 		
 
 	}
@@ -216,7 +244,11 @@ path.highcharts-button-symbol{
 
 rect.highcharts-background {
 	radius : 10px;
-
 }
+
+
+
+
+
 
 
