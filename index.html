@@ -44,41 +44,29 @@
 
     <nav class="site-header py-1 nav-bg">
       <div class="container d-flex flex-column flex-md-row justify-content-between">
-        <a class="py-2 d-none d-md-inline-block" href="#">
+        <a class="py-2 d-none d-md-inline-block" href="index.html">
           <span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a>
+        <a class="py-2 d-none d-md-inline-block btn btn-primary btn-sm" href="feedback.html">
+            <span class="glyphicon glyphicon-home" aria-hidden="true"></span> Kritik & Saran </a>
       </div>
     </nav>
 
     <!-- image slide bar --> 
 
    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-          <li data-target="#myCarousel" data-slide-to="1"></li>
-          <li data-target="#myCarousel" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img class="first-slide" src="img/headercity.png" alt="First slide" />
-            <div class="container">
-              <div class="carousel-caption text-left">
-                <h1>Jakarta Traffic</h1>
-                <p>Visualization to see traffic situation such as congestion level, morning or evening peak congestion level, traffic flow and traffic incident. 
-                  <br/><br/><br/><br/> </p>
-              </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img class="first-slide" src="img/headercity.png" alt="First slide" />
+          <div class="container">
+            <div class="carousel-caption text-left">
+              <h1>Jakarta Traffic</h1>
+              <p>Visualization to see traffic situation such as congestion level, morning or evening peak congestion level, traffic flow and traffic incident. 
+                <br/><br/><br/><br/> </p>
             </div>
           </div>
-       
         </div>
-        <!--<a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>-->
       </div>
+    </div>
 
     <!-- content --> 
 
@@ -221,39 +209,36 @@
     </div>
 
     <!-- feedback form. Google form or formspree.io. -->
-    <div class="row" style="margin-bottom:50px">
+    <div class="row" style="margin:50px">
 			<div class="container">
-				<!-- <div class="col-md-12 box text-center"> -->
-            <!-- <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSckx1bvbr26IAF06gVKWNyUTHW5XDRBJWsznGmEx1HYTq41nw/viewform?embedded=true" width="640" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe> -->
-            <div class="card">
-         
-              <div class="card-body">
-                <h4 class="card-title">Kritik dan Saran</h4>
-                <br>
-                <form action="https://www.enformed.io/zbfq63qz" method="POST" >
-                    <div class="form-group row">
-                      <label class="col-sm-2 col-form-label">Nama</label>
-                      <div class="col-sm-10">
-                        <input type="text" name="first_name"  class="form-control">
-                      </div>
-                    </div>
+        <div class="col-sm-12 text-center">
+        <a href="feedback.html" class="btn btn-primary btn-lg"> Kritik dan Saran</a> </div>
+        <!-- <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">Kritik dan Saran</h4>
+            <br>
+            <form action="https://www.enformed.io/zbfq63qz" method="POST" >
+                <div class="form-group row">
+                  <label class="col-sm-2 col-form-label">Nama</label>
+                  <div class="col-sm-10">
+                    <input type="text" name="first_name"  class="form-control">
+                  </div>
+                </div>
 
-                    <div class="form-group row">
-                      <label class="col-sm-2 col-form-label">Pesan</label>
-                      <div class="col-sm-10">
-                        <textarea class="form-control" name="feedback" rows="3"></textarea>
-                      </div>
-                    </div> 
-                    <div class="form-group pull-right">
-                      <div class="col-sm-12">
-                      <button type="submit" class="btn btn-primary float-right">Submit</button>
-                      </div>
-                    </div>
-                </form>
-              </div>
-            </div>
-          
-          <!-- </div> -->
+                <div class="form-group row">
+                  <label class="col-sm-2 col-form-label">Pesan</label>
+                  <div class="col-sm-10">
+                    <textarea class="form-control" name="feedback" rows="3"></textarea>
+                  </div>
+                </div> 
+                <div class="form-group pull-right">
+                  <div class="col-sm-12">
+                  <button type="submit" class="btn btn-primary float-right">Submit</button>
+                  </div>
+                </div>
+            </form>
+          </div>
+        </div> -->
       </div>
     </div>
 
