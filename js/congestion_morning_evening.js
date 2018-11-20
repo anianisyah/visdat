@@ -71,14 +71,14 @@ $(function () {
                 },
                 legend: {
                     layout: 'vertical',
-                    align: 'right',
-                    verticalAlign: 'top',
-                    x: -40,
-                    y: 10,
+                    align: 'left',
+                    verticalAlign: 'bottom',
+                    x: 120,
+                    y: 20,
                     floating: true,
-                    borderWidth: 1,
-                    backgroundColor: ((Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'),
-                    shadow: true
+                    //borderWidth: 1,
+                    //backgroundColor: ((Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'),
+                    //shadow: true
                 },
                 credits: {
                     enabled: false
