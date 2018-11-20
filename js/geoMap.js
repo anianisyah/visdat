@@ -23,7 +23,7 @@ legend.onAdd = function (map) {
 
     var div = L.DomUtil.create('div', 'info legend'),
         grades = [1,2,3,4,5],
-        labels = ['sangat lancar','lancar','padat','macet','macet parah'];
+        labels = ['sangat lancar','lancar','padat','macet','sangat macet'];
 
     // loop through our density intervals and generate a label with a colored square for each interval
     for (var i = 0; i < grades.length; i++) {
@@ -35,10 +35,12 @@ legend.onAdd = function (map) {
 };
 
 legend.addTo(map);
+
 					
 $(document).ready(function(){
 	$('.waktu').on('change', function (){
 		if( $(this).attr('value')  == "1"){
+
 			var latlang_red = lightred_data_2018_10_24_12_00;
 			var latlang_lightgreen = lightgreen_data_2018_10_24_12_00;
 			var latlang_darkgreen = darkgreen_data_2018_10_24_12_00;
@@ -50,6 +52,12 @@ $(document).ready(function(){
 			var latlang_darkgreen = darkgreen_data_2018_10_25_08_00;
 			var latlang_darkyellow = darkyellow_data_2018_10_25_08_00;
 			var latlang_lightyellow = lightyellow_data_2018_10_25_08_00;
+		}
+		for ( var i=0; i < markers.length; ++i ) 
+		{
+			L.marker( [markers[i].start_lat, markers[i].start_long] )
+		      .bindPopup(  'status kemacetan: '+ markers[i].criticality+'<br>'+" jalan ditutup " )
+		      .addTo( map );
 		}
 			var multiPolyLineOptions_red = {color:'red'};
 			var multiPolyLineOptions_lightgreen = {color:'lightgreen'};

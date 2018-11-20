@@ -159,9 +159,9 @@ $(function () {
                             },
                             dataLabels: {
                                 enabled: true,
-                                color: colors[0],
+                                color: '#000',
                                 style: {
-                                    fontWeight: 'bold'
+                                    fontWeight: 'bold', 
                                 },
                                 formatter: function() {
                                     return this.y +'%';
