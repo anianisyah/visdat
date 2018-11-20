@@ -12,7 +12,7 @@
     <!-- Bootstrap core CSS -->
 
     <!-- Custom styles for this template -->
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
 
     <!-- import js --> 
@@ -37,9 +37,6 @@
 				v.playbackRate = p.value;
 			},false);
 		};
-		
-		
-		 
 	</script>
   </head>
 
@@ -202,22 +199,14 @@
     <!-- geo map--> 
       
     <div class="container no-padding">
-       <div class="row">
-          <div class="col-md-12 header-filter">
-            <div class="col-md-9 float-left"><span class="float-right"></div>
-            <div class="col-md-3 float-right"> 
-              <select name="waktu" id="waktu" class="form-control">
-                <option value=" ">Pilih waktu </option>
-                <option value="1">24-10-2018 12:00 </option>
-                <option value="2">25-10-2018 8:00 </option>
-              </select>
-            </div>
-            <br/><br/>
-          </div>
-      </div>
-      <div class="embed-responsive embed-responsive-16by9">
+      <!--<div class="embed-responsive embed-responsive-16by9">
         <iframe class="embed-responsive-item" src="geomap.html" allowfullscreen></iframe>
+      </div>--> 
+     
+      <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src="geomap.html" allowfullscreen style="height: 800px;"></iframe>
       </div>
+
     </div>
 
     <!-- feedback form. Google form or formspree.io. -->

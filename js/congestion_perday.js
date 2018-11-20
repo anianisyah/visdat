@@ -2,8 +2,6 @@ $(function () {
      var chart;
 
     $(document).ready(function(){
-        console.log('masuk ke chart');
-
       var start_data = "https://raw.githubusercontent.com/anianisyah/visdat/master/data/recap_congestion_by_date.json";
       
       var jqxhr = $.getJSON(start_data, function() {
@@ -27,8 +25,6 @@ $(function () {
         }); 
 
         function create_chart(jqxhr, road_name){
-            console.log(road_name);
-
                 var colors = Highcharts.getOptions().colors,
                     categories = ['Monday', 'Tuesday', 'Wednesday', 'Thusday', 'Friday', 'Saturday', 'Sunday'],
                     name = 'Day',

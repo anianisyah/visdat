@@ -89,13 +89,13 @@ $(function () {
 
     })
       .done(function() {
-        console.log( "second success" );
+       // console.log( "second success" );
     })
       .fail(function() {
-        console.log( "error" );
+        //console.log( "error" );
     })
       .always(function() {
-        console.log( "complete" );
+        //console.log( "complete" );
     });
 
     });
