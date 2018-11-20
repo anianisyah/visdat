@@ -37,7 +37,6 @@ legend.onAdd = function (map) {
 legend.addTo(map);
 					
 $(document).ready(function(){
-	console.log("asasas");
 	$('.waktu').on('change', function (){
 		if( $(this).attr('value')  == "1"){
 			var latlang_red = lightred_data_2018_10_24_12_00;

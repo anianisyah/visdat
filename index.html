@@ -288,11 +288,41 @@
           <div class="col-md-12 header-filter">
             <div class="col-md-9 float-left"><span class="float-right"></div>
             <div class="col-md-3 float-right"> 
-              <select name="jalan" id="jalan" class="form-control">
-                <option value="">Select Road Name</option>
+              <select name="jalan" id="jalan" class="form-control" style="text-transform: capitalize;">
+                <!-- <option value="">Select Road Name</option>
                 <option value="A">Jalan A</option>
-                <option value="B">Jalan B</option>
+                <option value="B">Jalan B</option> -->
+                
+               
               </select>
+
+              <script type="text/javascript">
+                
+                 function rename_jalan(nama){
+                    var delete_by_date = nama.replace("by_date", "");
+                    var new_name = delete_by_date.replace(/_/g," ");
+                    return new_name;
+                }
+
+                var array_jalan = ['','jalan_c1_jalan_c2_by_date', 'jalan_cempaka_putih_barat_4_(north)_by_date','jalan_daan_mogot_by_date', 'jalan_dewi_sartika_by_date','jalan_dharma_kusuma_jalan_dharma_pratama_by_date', 'jalan_gunung_sahari_by_date', 'jalan_h_r_rasuna_said_by_date', 'jalan_haji_sulaiman_by_date', 'jalan_ir_h_juanda_by_date', 'jalan_jend_ahmad_yani_by_date', 'jalan_jend_sudirman_by_date', 'jalan_kusuma_utara_raya_by_date', 'jalan_nusa_utara_by_date', 'jalan_p2_by_date', 'jalan_parkit_by_date', 'jalan_prof_moch_yamin_(north)_by_date', 'jalan_qamari_by_date', 'jalan_raya_bogor_by_date', 'jalan_tol_jagorawi_by_date', 'jalan_tol_lingkar_luar_by_date'];
+
+                var wrapper = document.getElementById("jalan");
+
+                var myHTML = '';
+
+                for (var i = 0; i < array_jalan.length; i++) {
+                  if(array_jalan[i] == ''){
+                    myHTML += '<option value=select> Select Road Name </option>';
+                  }else{
+                      myHTML += '<option value='+array_jalan[i]+'>'+rename_jalan(array_jalan[i])+'</option>';
+                  }
+                }
+
+                wrapper.innerHTML = myHTML
+
+
+              </script>
+
             </div>
             <br/><br/>
           </div>

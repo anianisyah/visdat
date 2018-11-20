@@ -2,27 +2,28 @@ $(function () {
      var chart;
 
     $(document).ready(function(){
-      var start_data = "https://raw.githubusercontent.com/anianisyah/visdat/master/data/recap_congestion_by_date.json";
+      var start_data = "https://raw.githubusercontent.com/anianisyah/visdat/master/data/street_congestion/jalan_jend_sudirman_by_date.json";
       
       var jqxhr = $.getJSON(start_data, function() {
-          create_chart(jqxhr, 'A');
+          create_chart(jqxhr, 'Jalan Jend Sudirman');
 
         $('#jalan').change(function(){
-              
-              var select_jalan; 
 
-                if(this.value == "A"){
-                    select_jalan = "https://raw.githubusercontent.com/anianisyah/visdat/master/data/recap_congestion_by_date.json";
-                }else if(this.value == "B"){
-                    select_jalan = "https://raw.githubusercontent.com/anianisyah/visdat/master/data/recap_congestion_by_date_2.json";
-                }else{
-                    select_jalan = "https://raw.githubusercontent.com/anianisyah/visdat/master/data/recap_congestion_by_date.json";
-                }
+              var select_jalan = this.value; 
+               
+              var nama_jalan = rename_jalan(this.value);
 
-                var call_function = $.getJSON(select_jalan, function(){
-                    create_chart(call_function, jalan.value);
+                var call_function = $.getJSON('https://raw.githubusercontent.com/anianisyah/visdat/master/data/street_congestion/'+select_jalan+'.json', function(){
+                    create_chart(call_function, nama_jalan);
                 });
         }); 
+
+        function rename_jalan(nama){
+            var delete_by_date = nama.replace("by_date", "");
+            var new_name = delete_by_date.replace(/_/g," ");
+            return new_name;
+        }
+
 
         function create_chart(jqxhr, road_name){
                 var colors = Highcharts.getOptions().colors,
@@ -115,7 +116,10 @@ $(function () {
                         text: 'Congestion Per Day'
                     },
                     subtitle: {
-                        text: road_name
+                        text: road_name, 
+                        style : {
+                            textTransform : 'capitalize'
+                        }
                     },
                     xAxis: {
                         categories: categories
