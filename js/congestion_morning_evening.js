@@ -3,21 +3,21 @@ $(function () {
 
     $(document).ready(function(){
 
-      var start_data = "https://raw.githubusercontent.com/anianisyah/visdat/89ab30dad4a5720cb759aaef50408acd132751a1/recap_morning_evening_peak.json";
+      var start_data = "https://raw.githubusercontent.com/anianisyah/visdat/master/data/recap_morning_evening_peak.json";
       
       var jqxhr = $.getJSON(start_data, function() {
           create_chart(jqxhr);
 
-        $('.jalan').change(function(){
+        $('#jalan').change(function(){
               
               var select_jalan; 
 
                 if(this.value == "A"){
-                    select_jalan = "https://raw.githubusercontent.com/anianisyah/visdat/89ab30dad4a5720cb759aaef50408acd132751a1/recap_morning_evening_peak.json";
+                    select_jalan = "https://raw.githubusercontent.com/anianisyah/visdat/master/data/recap_morning_evening_peak.json";
                 }else if(this.value == "B"){
-                    select_jalan = "data/recap_morning_evening_peak_2.json";
+                    select_jalan = "https://raw.githubusercontent.com/anianisyah/visdat/master/data/recap_morning_evening_peak_2.json";
                 }else{
-                    select_jalan = "https://raw.githubusercontent.com/anianisyah/visdat/89ab30dad4a5720cb759aaef50408acd132751a1/recap_morning_evening_peak.json";
+                    select_jalan = "https://raw.githubusercontent.com/anianisyah/visdat/master/data/recap_morning_evening_peak.json";
                 }
 
                 var call_function = $.getJSON(select_jalan, function(){

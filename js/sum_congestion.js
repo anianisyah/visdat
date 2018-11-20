@@ -3,7 +3,7 @@ $(function () {
     var chart;
     
     $(document).ready(function() {
-        var jqxhr = $.getJSON("data/recap_most_traffic_street.json", function(data) {
+        var jqxhr = $.getJSON("https://raw.githubusercontent.com/anianisyah/visdat/master/data/recap_most_traffic_street.json", function(data) {
             var congestion_long=0;
             for (var i = 0; i < jqxhr.responseJSON.length; i++){
                 console.log(jqxhr.responseJSON[i]["length"]);

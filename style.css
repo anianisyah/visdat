@@ -26,6 +26,44 @@ body {
 .no-margin {
   margin: 0; }
 
+.container-flat {
+  margin-bottom: 20px !important;
+  padding: 0px;
+  display: inline-flex; }
+  .container-flat .statistic {
+    border-radius: 3px;
+    background-color: #fff;
+    display: inline-block; }
+    .container-flat .statistic .header {
+      padding: 10px;
+      border-bottom: 2px solid #ccc;
+      text-transform: uppercase; }
+    .container-flat .statistic.left {
+      margin-right: 10px; }
+    .container-flat .statistic.right {
+      margin-left: 10px; }
+    .container-flat .statistic .header {
+      padding: 15px 30px;
+      color: #333;
+      text-transform: uppercase; }
+
+.container-radius {
+  background-color: #fff;
+  border-radius: 5px;
+  margin-bottom: 20px !important; }
+
+.header-filter {
+  background-color: #b3d800;
+  height: 60px;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 20px; }
+
+.wrap {
+  padding: 10px;
+  border-radius: 3px;
+  background: #fff; }
+
 .box {
   padding: 10px;
   float: left;
@@ -74,5 +112,8 @@ text.highcharts-credits {
 
 path.highcharts-button-symbol {
   display: none; }
+
+rect.highcharts-background {
+  radius: 10px; }
 
 /*# sourceMappingURL=style.css.map */

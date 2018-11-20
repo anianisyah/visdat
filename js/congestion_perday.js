@@ -4,35 +4,37 @@ $(function () {
     $(document).ready(function(){
         console.log('masuk ke chart');
 
-      var start_data = "data/recap_congestion_by_date.json";
+      var start_data = "https://raw.githubusercontent.com/anianisyah/visdat/master/data/recap_congestion_by_date.json";
       
       var jqxhr = $.getJSON(start_data, function() {
-          create_chart(jqxhr);
+          create_chart(jqxhr, 'A');
 
-        $('.jalan').change(function(){
+        $('#jalan').change(function(){
               
               var select_jalan; 
 
                 if(this.value == "A"){
-                    select_jalan = "data/recap_congestion_by_date.json";
+                    select_jalan = "https://raw.githubusercontent.com/anianisyah/visdat/master/data/recap_congestion_by_date.json";
                 }else if(this.value == "B"){
-                    select_jalan = "data/recap_congestion_by_date_2.json";
+                    select_jalan = "https://raw.githubusercontent.com/anianisyah/visdat/master/data/recap_congestion_by_date_2.json";
                 }else{
-                    select_jalan = "data/recap_congestion_by_date.json";
+                    select_jalan = "https://raw.githubusercontent.com/anianisyah/visdat/master/data/recap_congestion_by_date.json";
                 }
 
                 var call_function = $.getJSON(select_jalan, function(){
-                    create_chart(call_function);
+                    create_chart(call_function, jalan.value);
                 });
         }); 
 
-        function create_chart(jqxhr){
+        function create_chart(jqxhr, road_name){
+            console.log(road_name);
+
                 var colors = Highcharts.getOptions().colors,
                     categories = ['Monday', 'Tuesday', 'Wednesday', 'Thusday', 'Friday', 'Saturday', 'Sunday'],
                     name = 'Day',
                     data = [{
                             y: jqxhr.responseJSON[0]["congestion"], // senin 
-                            color: colors[0],
+                            color: colors[3],
                             drilldown: {
                                 name: 'Time',
                                 categories: ['00:00', '01:00', '02:00', '03:00', '04:00', '05:00', '6:00', '7:00', '8:00', '9:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00', '21:00', '22:00', '23:00'],
@@ -41,7 +43,7 @@ $(function () {
                             }
                         }, {
                             y: jqxhr.responseJSON[1]["congestion"], // selasa
-                            color: colors[1],
+                            color: colors[3],
                             drilldown: {
                                 name: 'Time',
                                  categories: ['00:00', '01:00', '02:00', '03:00', '04:00', '05:00', '6:00', '7:00', '8:00', '9:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00', '21:00', '22:00', '23:00'],
@@ -50,7 +52,7 @@ $(function () {
                             }
                         }, {
                             y: jqxhr.responseJSON[2]["congestion"],
-                            color: colors[2], // rabu
+                            color: colors[3], // rabu
                             drilldown: {
                                 name: 'Time',
                                  categories: ['00:00', '01:00', '02:00', '03:00', '04:00', '05:00', '6:00', '7:00', '8:00', '9:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00', '21:00', '22:00', '23:00'],
@@ -68,7 +70,7 @@ $(function () {
                             }
                         }, {
                             y: jqxhr.responseJSON[4]["congestion"], // jumat 
-                            color: colors[4],
+                            color: colors[3],
                             drilldown: {
                                 name: 'Time',
                                  categories: ['00:00', '01:00', '02:00', '03:00', '04:00', '05:00', '6:00', '7:00', '8:00', '9:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00', '21:00', '22:00', '23:00'],
@@ -77,7 +79,7 @@ $(function () {
                             }, 
                         }, {
                             y: jqxhr.responseJSON[5]["congestion"], // sabtu 
-                            color: colors[4],
+                            color: colors[3],
                             drilldown: {
                                 name: 'Time',
                                  categories: ['00:00', '01:00', '02:00', '03:00', '04:00', '05:00', '6:00', '7:00', '8:00', '9:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00', '21:00', '22:00', '23:00'],
@@ -86,7 +88,7 @@ $(function () {
                             }
                         }, {
                             y: jqxhr.responseJSON[6]["congestion"], // minggu
-                            color: colors[4],
+                            color: colors[3],
                             drilldown: {
                                 name: 'Time',
                                  categories: ['00:00', '01:00', '02:00', '03:00', '04:00', '05:00', '6:00', '7:00', '8:00', '9:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00', '21:00', '22:00', '23:00'],
@@ -114,7 +116,7 @@ $(function () {
                         text: 'Congestion Per Day'
                     },
                     subtitle: {
-                        text: 'Click the columns to view detail'
+                        text: road_name
                     },
                     xAxis: {
                         categories: categories
@@ -169,7 +171,7 @@ $(function () {
                             var point = this.point,
                                 s = this.x +':<b>'+ this.y +'% congestion</b><br/>';
                             if (point.drilldown) {
-                                s += 'Click to view '+ point.category +' detail';
+                                s += 'Click to view detail';
                             } else {
                                 s += 'Click to return to congestion per day';
                             }

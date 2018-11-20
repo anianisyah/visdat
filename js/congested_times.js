@@ -3,7 +3,7 @@ $(function () {
     var chart;
 	
     $(document).ready(function() {
-       	var jqxhr = $.getJSON("data/recap_congestion_by_date.json", function(data) {
+       	var jqxhr = $.getJSON("https://raw.githubusercontent.com/anianisyah/visdat/master/data/recap_congestion_by_date.json", function(data) {
             var times = ['00:00', '01:00', '02:00', '03:00', '04:00', '05:00', '6:00', '7:00', '8:00', '9:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00', '21:00', '22:00', '23:00'];
             console.log(jqxhr);
             var congested_time = [];
@@ -54,7 +54,7 @@ $(function () {
             var parent = document.getElementById('container4');
 
             for (var i = 0; i < new_congested_time.length; i++){
-                parent.innerHTML += '<canvas id="canvas'+ (i+1) +'" width="250" height="250" style="background-color:#333; margin-right:10px"></canvas>'
+                parent.innerHTML += '<canvas id="canvas'+ (i+1) +'" width="200" height="200" style="background-color:#333; margin : 20px;"></canvas>'
             }
 
             var canvas1 = document.getElementById("canvas1");
