@@ -106,7 +106,10 @@ $(function () {
         
                 chart = new Highcharts.Chart({
                     chart: {
-                        renderTo: 'container'
+                        renderTo: 'container', 
+                        style : {
+                            fontFamily : 'Helvetica Neue, Helvetica, Arial, sans-serif'
+                        }
                     },
                     title: {
                         text: 'Congestion Per Day'

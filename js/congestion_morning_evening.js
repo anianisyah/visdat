@@ -28,7 +28,10 @@ $(function () {
         function create_chart(data_congestion){
              Highcharts.chart('container2', {
                 chart: {
-                    type: 'bar'
+                    type: 'bar',
+                    style : {
+                        fontFamily : "Helvetica Neue, Helvetica, Arial, sans-serif"
+                    }
                 },
                 title: {
                     text: 'Congestion Morning and Evening '
