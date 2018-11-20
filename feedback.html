@@ -1,0 +1,90 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Visualisasi Data - Jakarta Traffic </title>
+
+    <!-- Bootstrap core CSS -->
+
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- import js --> 
+    
+    <!-- high chart --> 
+    <script src="http://code.highcharts.com/highcharts.js"></script>
+    <script src="http://code.highcharts.com/modules/exporting.js"></script>
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src = "https://code.highcharts.com/highcharts.js"></script>  
+    <script src = "https://code.highcharts.com/modules/drilldown.js"></script>  
+    <script src = "https://code.highcharts.com/modules/data.js"></script> 
+    <!-- end --> 
+	<script type="text/javascript">
+		window.onload = function () {
+	 
+			var v = document.getElementById("myVideo");
+			var p = document.getElementById("pbr");
+			var c = document.getElementById("currentPbr");
+
+			p.addEventListener('input',function(){
+				c.innerHTML = p.value;
+				v.playbackRate = p.value;
+			},false);
+		};
+	</script>
+  </head>
+
+  <body>
+
+    <nav class="site-header py-1 nav-bg">
+        <div class="container d-flex flex-column flex-md-row justify-content-between">
+            <a class="py-2 d-none d-md-inline-block" href="index.html">
+            <span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a>
+            <a class="py-2 d-none d-md-inline-block btn btn-primary btn-sm" href="feedback.html">
+                <span class="glyphicon glyphicon-home" aria-hidden="true"></span> Kritik & Saran </a>
+        </div>
+    </nav>
+
+
+
+   <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+            <img class="first-slide" src="img/headercity.png" alt="First slide" />
+            <div class="container">
+                <div class="carousel-caption text-left">
+                <h1>Jakarta Traffic</h1>
+                <p>Visualization to see traffic situation such as congestion level, morning or evening peak congestion level, traffic flow and traffic incident. 
+                    <br/><br/><br/><br/> </p>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row" style="margin-bottom:50px">
+        <div class="container">
+            <div class="col-md-12 box text-center">
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSckx1bvbr26IAF06gVKWNyUTHW5XDRBJWsznGmEx1HYTq41nw/viewform?embedded=true" width="640" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="no-padding no-margin footer-bg">
+      <footer class="container py-5 footer-bg">
+        <div class="row">
+          <div class="col-12 col-md">
+            <small class="d-block mb-3 text-muted text-center">Kelompok 3 <br/>&copy; 2018</small>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
