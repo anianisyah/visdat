@@ -40,33 +40,25 @@ $(document).ready(function(){
 	console.log("asasas");
 	$('.waktu').on('change', function (){
 		if( $(this).attr('value')  == "1"){
-			var latlang_red = red_data_2018_10_24_12_00;
-			var latlang_green = green_data_2018_10_24_12_00;
-			 // Creating poly line options
-			 var multiPolyLineOptions_red = {color:'red'};
-			 var multiPolyLineOptions_green = {color:'green'};
-			 // Creating multi poly-lines
-			 var multipolyline_red = L.polyline(latlang_red , multiPolyLineOptions_red);
-			 
-			 // Adding multi poly-line to map
-			 multipolyline_red.addTo(map);
-			 var multipolyline_green = L.polyline(latlang_green , multiPolyLineOptions_green);
-			 
-			 // Adding multi poly-line to map
-			 multipolyline_green.addTo(map);
-			 
+			var latlang_red = lightred_data_2018_10_24_12_00;
+			var latlang_lightgreen = lightgreen_data_2018_10_24_12_00;
+			var latlang_darkgreen = darkgreen_data_2018_10_24_12_00;
+			var latlang_darkyellow = darkyellow_data_2018_10_24_12_00;
+			var latlang_lightyellow = lightyellow_data_2018_10_24_12_00;
 		}else if ( $(this).attr('value') == "2"){
 			var latlang_red = lightred_data_2018_10_25_08_00;
 			var latlang_lightgreen = lightgreen_data_2018_10_25_08_00;
 			var latlang_darkgreen = darkgreen_data_2018_10_25_08_00;
 			var latlang_darkyellow = darkyellow_data_2018_10_25_08_00;
 			var latlang_lightyellow = lightyellow_data_2018_10_25_08_00;
-			 var multiPolyLineOptions_red = {color:'red'};
-			 var multiPolyLineOptions_lightgreen = {color:'lightgreen'};
-			 var multiPolyLineOptions_darkgreen = {color:'green'};
-			 var multiPolyLineOptions_lightyellow = {color:'yellow'};
-			 var multiPolyLineOptions_darkyellow = {color:'orange'};
-			 // Creating multi poly-lines
+		}
+			var multiPolyLineOptions_red = {color:'red'};
+			var multiPolyLineOptions_lightgreen = {color:'lightgreen'};
+			var multiPolyLineOptions_darkgreen = {color:'green'};
+			var multiPolyLineOptions_lightyellow = {color:'yellow'};
+			var multiPolyLineOptions_darkyellow = {color:'orange'};
+
+		// Creating multi poly-lines
 			 var multipolyline_red = L.polyline(latlang_red , multiPolyLineOptions_red);
 			 
 			 // Adding multi poly-line to map
@@ -87,7 +79,6 @@ $(document).ready(function(){
 			 
 			 // Adding multi poly-line to map
 			 multipolyline_lightyellow.addTo(map);
-		}
 		
 		
 	});
