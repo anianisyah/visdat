@@ -16,13 +16,13 @@ $(function () {
                         type: 'bar'
                     },
                     title: {
-                        text: 'Comparison: Congestion Long vs Jakarta-Bandung Distance '
+                        text: 'Comparison: Congestion Distance vs Jakarta-Bandung Distance '
                     },
                     //subtitle: {
                       //  text: 'Source: ''
                     //},
                     xAxis: {
-                        categories: ['Congestion Long', 'Jakarta-Bandung Distance'],
+                        categories: ['Congestion Distance', 'Jakarta-Bandung Distance'],
                         title: {
                             text: null
                         }
@@ -30,7 +30,7 @@ $(function () {
                     yAxis: {
                         min: 0,
                         title: {
-                            text: 'Long/Distance',
+                            text: 'Distance in km',
                             align: 'high'
                         },
                         labels: {
@@ -59,7 +59,7 @@ $(function () {
                         enabled: false
                     },
                     series: [{
-                        name: 'Long/Distance',
+                        name: 'Distance in km',
                         data: [congestion_long, 120.0],
                         color: '#014D65'
                     }]
