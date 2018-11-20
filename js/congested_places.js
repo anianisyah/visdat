@@ -24,7 +24,7 @@ $(function () {
                 },
                 yAxis: {
                     title: {
-                        text: 'Jam Factors'
+                        text: 'Percentage'
                     }
                 },
                 tooltip: {
