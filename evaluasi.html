@@ -24,13 +24,12 @@
     <script src = "https://code.highcharts.com/highcharts.js"></script>  
     <script src = "https://code.highcharts.com/modules/drilldown.js"></script>  
     <script src = "https://code.highcharts.com/modules/data.js"></script> 
-    <!-- end --> 
-	
+    
   </head>
 
   <body>
 
-   <nav class="site-header py-1 nav-bg">
+    <nav class="site-header py-1 nav-bg">
       <div class="container d-flex flex-column flex-md-row ">
         <a class="py-2 d-none d-md-inline-block" href="index.html" style="width: 10%;">
           <span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a>
@@ -59,13 +58,18 @@
         </div>
     </div>
 
-    <div class="row" style="margin-bottom:50px">
-        <div class="container">
-            <div class="col-md-12 box text-center">
-                <!-- <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSckx1bvbr26IAF06gVKWNyUTHW5XDRBJWsznGmEx1HYTq41nw/viewform?embedded=true" width="640" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe> -->
-                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe7KhovNnUbbSb_46GK4nW_PVGnC_o3K_zy5hH5Qd9d0GSR0w/viewform?embedded=true" width="640" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
-            </div>
+    <div class="container no-padding">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <h5 class="title">Traffic congestion statistics for Jakarta based on API HERE database for 2018.</h5>
+          </div>
         </div>
+
+        <!-- chart --> 
+
+        <div  id="container" class="col-md-12 container-radius" style="min-width: 400px; height: 400px; margin: 0 auto; padding-bottom:50px;">
+               <script type="text/javascript" src="js/evaluation_result.js"></script>
+          </div>
     </div>
 
 
